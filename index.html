@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
-  <meta charset="UTF-8"
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>La Chiantina</title>
   <!-- Tailwind CSS -->
@@ -11,33 +11,30 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <!-- ScrollReveal -->
   <script src="https://unpkg.com/scrollreveal"></script>
-  <!-- GSAP -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
 </head>
-<body>
+<body class="font-sans antialiased bg-gray-100 text-gray-800">
   <!-- Header -->
-  <header class="bg-gradient-to-r from-green-500 to-green-700 text-white py-4 shadow-md">
-    <div class="container mx-auto flex justify-between items-center">
-      <div class="text-2xl font-bold">La Chiantina</div>
+  <header class="fixed w-full bg-white shadow-md z-50">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <div class="text-3xl font-bold text-green-700">La Chiantina</div>
       <nav>
-        <ul class="flex space-x-4">
-          <li><a href="#" class="hover:text-gray-300">Home</a></li>
-          <li><a href="#about" class="hover:text-gray-300">About</a></li>
-          <li><a href="#products" class="hover:text-gray-300">Products</a></li>
-          <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
+        <ul class="flex space-x-8 text-lg">
+          <li><a href="#" class="hover:text-green-700">Home</a></li>
+          <li><a href="#about" class="hover:text-green-700">Chi Siamo</a></li>
+          <li><a href="#products" class="hover:text-green-700">Prodotti</a></li>
+          <li><a href="#contact" class="hover:text-green-700">Contatti</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="bg-gradient-to-r from-green-500 to-green-700 text-white py-20 md:py-32">
+   <!-- Hero Section -->
+   <section class="bg-gradient-to-r from-green-500 to-green-700 text-white py-20 md:py-32">
     <div class="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between">
       <div class="md:w-1/2 space-y-6">
-        <h1 class="text-4xl md:text-6xl font-bold">Discover the Power of Microgreens</h1>
-        <p class="text-lg md:text-xl">Explore our wide selection of fresh, nutrient-dense microgreens and elevate your culinary experiences.</p>
-        <a href="#products" class="bg-white text-green-700 px-6 py-3 rounded-full hover:bg-gray-200 inline-block">Shop Now</a>
+        <h1 class="text-4xl md:text-6xl font-bold">Assapora la Purezza dei Nostri Microgreens</h1>
+        <p class="text-lg md:text-xl">Scopri i nostri microgreens coltivati con passione in una terra dove tradizione e tecnologia si fondono per offrire freschezza e qualità.</p>
+        <a href="#products" class="bg-white text-green-700 px-6 py-3 rounded-full hover:bg-gray-200 inline-block">I nostri prodotti</a>
       </div>
       <div class="md:w-1/2 mb-8 md:mb-0">
        <img src="image-6.png" alt="Microgreens" class="rounded-lg shadow-lg">
@@ -45,204 +42,95 @@
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="py-16 md:py-32">
-    <div class="container mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold mb-8">About La Chiantina</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div>
-        <img src="image-7.png" alt="About La Chiantina" class="rounded-lg shadow-lg">
+  <!-- Story Section with Parallax -->
+  <section id="about" class="relative py-20 md:py-32 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="relative">
+          <img src="image-7.png" alt="La Chiantina" class="rounded-lg shadow-lg w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-green-700 to-transparent opacity-75"></div>
         </div>
-        <div>
-          <p class="text-lg md:text-xl mb-4">At la Chiantina, we are passionate about providing our customers with the freshest and most nutrient-dense microgreens. Our mission is to promote a healthier and more sustainable way of living by making these powerful greens accessible to everyone.</p>
-          <p class="text-lg md:text-xl mb-4">Our family-owned farm uses organic and sustainable farming practices to ensure the highest quality of our products. We take pride in our dedication to customer satisfaction and strive to offer a unique and personalized shopping experience.</p>
+        <div class="space-y-6 md:pl-12">
+          <h2 class="text-4xl font-bold text-gray-900">Chi Siamo</h2>
+          <p class="text-lg">La Chiantina nasce nel cuore dell'Irpinia, una terra di antiche tradizioni e pura bellezza. In questa zona, dove la qualità del cibo è una questione di orgoglio, abbiamo unito le tecniche agricole tradizionali con le più moderne.</p>
+          <p class="text-lg">Il nostro obiettivo è offrire microgreens freschi e nutrienti, mantenendo viva la tradizione della nostra terra e abbracciando
+            l'innovazione per garantire un prodotto di eccellenza.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Products Section -->
- <!-- <section id="products" class="bg-gray-100 py-16 md:py-32">-->
-    <div class="container mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold mb-8">Our Products</h2>
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="bg-white rounded-lg shadow-lg p-6">
-              <!-- class="rounded-lg mb-4" for image-->
-              <img src="IMG_1.jpeg" alt="Product 1" width="240" height="240" class="rounded-lg mb-4" >
-              <h3 class="text-xl font-bold mb-2">Sunflower Microgreens</h3>
-              <p class="text-gray-600 mb-4">Packed with vitamins, minerals, and antioxidants, our sunflower microgreens are a versatile addition to any dish.</p>
-              <a href="#" class="bg-green-500 text-white px-6 py-3 rounded-full hover:bg-green-600 inline-block">Buy Now</a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="bg-white rounded-lg shadow-lg p-6">
-              <img src="IMG_2.jpeg" alt="Product 2" width="240" height="240" class="rounded-lg mb-4">
-              <h3 class="text-xl font-bold mb-2">Kale Microgreens</h3>
-              <p class="text-gray-600 mb-4">Packed with vitamins A, C, and K, our kale microgreens are a nutritional powerhouse.</p>
-              <a href="#" class="bg-green-500 text-white px-6 py-3 rounded-full hover:bg-green-600 inline-block">Buy Now</a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="bg-white rounded-lg shadow-lg p-6">
-              <img src="IMG_3.jpeg" alt="Product 3" width="240" height="240" class="rounded-lg mb-4">
-              <h3 class="text-xl font-bold mb-2">Radish Microgreens</h3>
-              <p class="text-gray-600 mb-4">Spicy and peppery, our radish microgreens add a delightful crunch to any salad or dish.</p>
-              <a href="#" class="bg-green-500 text-white px-6 py-3 rounded-full hover:bg-green-600 inline-block">Buy Now</a>
-            </div>
+  <!-- Dynamic Product Grid -->
+  <section id="products" class="py-20 md:py-32 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">I Nostri Prodotti</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="group bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105">
+          <img src="IMG_1.jpeg" alt="Microgreens di Girasole" class="w-full h-64 object-cover">
+          <div class="p-6 space-y-4">
+            <h3 class="text-2xl font-bold">Microgreens di Girasole</h3>
+            <p class="text-gray-600">Ricchi di nutrienti essenziali per un'alimentazione sana e naturale.</p>
+          <!--  <a href="#" class="block text-center bg-green-500 text-white px-6 py-3 rounded-full hover:bg-green-600 transition duration-300">Acquista Ora</a>-->
           </div>
         </div>
-       <!-- <div class="swiper-pagination"></div> -->
+        <!-- Altri prodotti... -->
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-16 md:py-32">
-    <div class="container mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold mb-8">Contact Us</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div>
-          <form class="bg-white rounded-lg shadow-lg p-6">
-            <div class="mb-4">
-              <label for="name" class="block text-gray-700 font-bold mb-2">Name</label>
-              <input type="text" id="name" name="name" class="border-2 border-gray-300 p-2 rounded-lg w-full" required>
-            </div>
-            <div class="mb-4">
-              <label for="email" class="block text-gray-700 font-bold mb-2">Email</label>
-              <input type="email" id="email" name="email" class="border-2 border-gray-300 p-2 rounded-lg w-full" required>
-            </div>
-            <div class="mb-4">
-              <label for="message" class="block text-gray-700 font-bold mb-2">Message</label>
-              <textarea id="message" name="message" rows="4" class="border-2 border-gray-300 p-2 rounded-lg w-full" required></textarea>
-            </div>
-            <button type="submit" class="bg-green-500 text-white px-6 py-3 rounded-full hover:bg-green-600 inline-block">Send Message</button>
-          </form>
-        </div>
-        <div>
-          <div class="bg-white rounded-lg shadow-lg p-6">
-            <h3 class="text-xl font-bold mb-4">Visit Us</h3>
-            <p class="text-gray-600 mb-2">123 Main Street, Anytown USA</p>
-            <p class="text-gray-600 mb-2">Phone: (123) 456-7890</p>
-            <p class="text-gray-600 mb-2">Email: info@microgreenmarket.com</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.448495199105!2d-73.98566368450069!3d40.72911477932941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a3f81f4301%3A0xb6d9d80e5b770834!2s123%20Main%20St%2C%20New%20York%2C%20NY%2010001%2C%20USA!5e0!3m2!1sen!2sca!4v1649097733593!5m2!1sen!2sca" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <section id="contact" class="py-20 md:py-32 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">Contattaci</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <form class="bg-gray-100 rounded-lg shadow-lg p-8">
+          <div class="mb-6">
+            <label for="name" class="block text-gray-700 font-bold mb-2">Nome</label>
+            <input type="text" id="name" name="name" class="border-2 border-gray-300 p-3 rounded-lg w-full" required>
           </div>
+          <div class="mb-6">
+            <label for="email" class="block text-gray-700 font-bold mb-2">Email</label>
+            <input type="email" id="email" name="email" class="border-2 border-gray-300 p-3 rounded-lg w-full" required>
+          </div>
+          <div class="mb-6">
+            <label for="message" class="block text-gray-700 font-bold mb-2">Messaggio</label>
+            <textarea id="message" name="message" rows="4" class="border-2 border-gray-300 p-3 rounded-lg w-full" required></textarea>
+          </div>
+          <button type="submit" class="bg-green-500 text-white px-6 py-3 rounded-full hover:bg-green-600 transition duration-300">Invia</button>
+        </form>
+        <div class="space-y-4 text-lg">
+          <p><strong>Indirizzo:</strong> Lacedonia(AV),Italia</p>
+          <p><strong>Telefono:</strong> 348 5409 351</p>
+          <!-- <p><strong>Email:</strong> info@lachiantina.it</p> -->
         </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-800 text-white py-8">
-    <div class="container mx-auto">
-      <div class="flex flex-col md:flex-row justify-between items-center">
-        <div>&copy; 2023 La Chiantina. All rights reserved.</div>
-        <div class="mt-4 md:mt-0">
-          <ul class="flex space-x-4">
-            <li><a href="#" class="hover:text-gray-300">Facebook</a></li>
-            <li><a href="#" class="hover:text-gray-300">Twitter</a></li>
-            <li><a href="#" class="hover:text-gray-300">Instagram</a></li>
-          </ul>
-        </div>
-      </div>
+  <footer class="bg-green-700 text-white py-8">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2024 La Chiantina. Tutti i diritti riservati.</p>
     </div>
   </footer>
 
-  <!-- Swiper Initialization -->
+  <!-- Swiper JS Initialization -->
   <script>
-    const swiper = new Swiper('.swiper', {
+    var swiper = new Swiper('.swiper', {
       loop: true,
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
       },
-      autoplay: {
-        delay: 5000,
-      },
-      breakpoints: {
-        640: {
-          slidesPerView: 1,
-        },
-        768: {
-          slidesPerView: 2,
-        },
-        1024: {
-          slidesPerView: 3,
-        },
-      },
-    });
-  </script>
-
-  <!-- ScrollReveal Initialization -->
-  <script>
-    ScrollReveal().reveal('.hero-content', { delay: 500, duration: 1000, distance: '50px', origin: 'bottom' });
-    ScrollReveal().reveal('.about-image', { delay: 500, duration: 1000, distance: '50px', origin: 'left' });
-    ScrollReveal().reveal('.about-content', { delay: 500, duration: 1000, distance: '50px', origin: 'right' });
-    ScrollReveal().reveal('.product-card', { delay: 500, duration: 1000, distance: '50px', origin: 'bottom' });
-    ScrollReveal().reveal('.contact-form', { delay: 500, duration: 1000, distance: '50px', origin: 'left' });
-    ScrollReveal().reveal('.contact-info', { delay: 500, duration: 1000, distance: '50px', origin: 'right' });
-  </script>
-
-  <!-- GSAP Initialization -->
-  <script>
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.from('.hero-image', {
-      scrollTrigger: {
-        trigger: '.hero-image',
-        start: 'top center',
-        end: 'bottom center',
-        scrub: true,
-        toggleActions: 'play none none reverse',
-      },
-      scale: 1.1,
-      duration: 10,
-      ease: 'power2.inOut',
     });
 
-    gsap.from('.hero-content h1', {
-      scrollTrigger: {
-        trigger: '.hero-content',
-        start: 'top center',
-        end: 'bottom center',
-        scrub: true,
-        toggleActions: 'play none none reverse',
-      },
-      y: 50,
-      opacity: 0,
-      duration: 1,
-      ease: 'power2.out',
-    });
-
-    gsap.from('.hero-content p', {
-      scrollTrigger: {
-        trigger: '.hero-content',
-        start: 'top center',
-        end: 'bottom center',
-        scrub: true,
-        toggleActions: 'play none none reverse',
-      },
-      y: 50,
-      opacity: 0,
-      duration: 1,
-      delay: 0.5,
-      ease: 'power2.out',
-    });
-
-    gsap.from('.hero-content a', {
-      scrollTrigger: {
-        trigger: '.hero-content',
-        start: 'top center',
-        end: 'bottom center',
-        scrub: true,
-        toggleActions: 'play none none reverse',
-      },
-      y: 50,
-      opacity: 0,
-      duration: 1,
-      delay: 1,
-      ease: 'power2.out',
+    // ScrollReveal Initialization
+    ScrollReveal().reveal('#about, #products, #contact', {
+      delay: 200,
+      distance: '50px',
+      duration: 1000,
+      easing: 'ease-out',
+      origin: 'bottom',
     });
   </script>
 </body>
